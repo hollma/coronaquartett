@@ -1,10 +1,11 @@
 \documentclass[tikz]{standalone}
 \usepackage{ngerman}
+\usepackage{adjustbox}
 
 % Definiere hier die Stats
 \newcommand{\name}{Lothar Wieler}
 \newcommand{\foto}{wieler.jpg}
-\newcommand{\fotoscale}{0.251}
+\newcommand{\fotoscale}{1}
 \newcommand{\zitat}{Ich bin schon lange der Papagei.}
 \newcommand{\frustrationstoleranz}{7}
 \newcommand{\erzaehlstimme}{8}
@@ -17,9 +18,8 @@
 		
 		\node[inner sep=0pt, minimum width=5cm, minimum height=0cm,anchor=north] at (3cm,-0.3cm) (titel) {\textbf{\Large \name}};
 		
-		% je nach eingebundener Grafik den scale-Parameter anpassen, bis es gut aussieht
-		\node[inner sep=0pt, rounded corners=0pt, minimum width=5cm, minimum height=3cm,text width=5cm, text height=3.75cm, anchor=north west] at (0.5cm,-0.8cm) (bild) {\includegraphics[scale=\fotoscale]{\foto}};
-		
+		\node[inner sep=0pt, rounded corners=0pt, minimum width=5cm, minimum height=3cm,text width=5cm, text height=3.75cm, anchor=north west] at (0.5cm,-0.8cm) (bild) {\maxsizebox{5cm}{6cm}{\includegraphics[scale=\fotoscale]{\foto}}};
+						
 		\node[rounded corners=0pt, minimum width=5cm, minimum height=0.75cm, anchor=north west] at (0.5cm,-4.5cm) (zitat) {\footnotesize "`\zitat"'};
 				
 		\node[rounded corners=0pt, fill=gray!10, minimum width=5cm, minimum height=0.75cm, anchor=north west] at (0.5cm,-5.5cm) (stat2) {};
