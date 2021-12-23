@@ -1,0 +1,41 @@
+\documentclass[tikz]{standalone}
+\usepackage{ngerman}
+\usepackage{adjustbox}
+
+% Definiere hier die Stats
+\newcommand{\name}{Attila Hildmann}
+\newcommand{\foto}{hildmann.jpg}
+\newcommand{\fotoscale}{1}
+\newcommand{\zitat}{Mein Instagram wurde gelöscht.}
+\newcommand{\frustrationstoleranz}{6}
+\newcommand{\erzaehlstimme}{2}
+\newcommand{\coolness}{1}
+\newcommand{\schwurbeln}{10}
+
+\begin{document}
+	\begin{tikzpicture}
+		\node[rounded corners=20pt, draw, minimum width=6cm, minimum height=9cm, anchor=north west] at (0,0) (rahmen) {~};
+		
+		\node[inner sep=0pt, minimum width=5cm, minimum height=0cm,anchor=north] at (3cm,-0.3cm) (titel) {\textbf{\Large \name}};
+		
+		\node[inner sep=0pt, rounded corners=0pt, minimum width=5cm, minimum height=3cm,text width=5cm, text height=3.75cm, anchor=north west] at (0.5cm,-0.8cm) (bild) {\maxsizebox{5cm}{6cm}{\includegraphics[scale=\fotoscale]{\foto}}};
+		
+		\node[rounded corners=0pt, minimum width=5cm, minimum height=0.75cm, anchor=north west] at (0.5cm,-4.5cm) (zitat) {\footnotesize "`\zitat"'};
+		
+		\node[rounded corners=0pt, fill=gray!10, minimum width=5cm, minimum height=0.75cm, anchor=north west] at (0.5cm,-5.5cm) (stat2) {};
+		\node[left, minimum width=5cm, minimum height=0.75cm, anchor=north west, text width=5cm] at (0.5cm,-5.5cm) (stat2key) {\textbf{Frustrationstoleranz}};
+		\node[right, minimum width=5cm, minimum height=0.75cm, anchor=north west, text width=4.5cm] at (0.5cm,-5.5cm) (stat2val) {\hfill \frustrationstoleranz};
+		
+		\node[rounded corners=0pt, fill=gray!30, minimum width=5cm, minimum height=0.75cm, anchor=north west] at (0.5cm,-6.25cm) (stat3) {};
+		\node[left, minimum width=5cm, minimum height=0.75cm, anchor=north west, text width=5cm] at (0.5cm,-6.25cm) (stat3key) {\textbf{Erzählstimme}};
+		\node[right, minimum width=5cm, minimum height=0.75cm, anchor=north west, text width=4.5cm] at (0.5cm,-6.25cm) (stat3val) {\hfill \erzaehlstimme};
+		
+		\node[rounded corners=0pt, fill=gray!10, minimum width=5cm, minimum height=0.75cm, anchor=north west] at (0.5cm,-7cm) (stat4) {};
+		\node[left, minimum width=5cm, minimum height=0.75cm, anchor=north west, text width=5cm] at (0.5cm,-7cm) (stat4key) {\textbf{Coolness}};
+		\node[right, minimum width=5cm, minimum height=0.75cm, anchor=north west, text width=4.5cm] at (0.5cm,-7cm)(stat4val) {\hfill \coolness};
+		
+		\node[rounded corners=0pt, fill=gray!30, minimum width=5cm, minimum height=0.75cm, anchor=north west] at (0.5cm,-7.75cm) (stat5) {};
+		\node[left, minimum width=5cm, minimum height=0.75cm, anchor=north west, text width=5cm] at (0.5cm,-7.75cm) (stat5key) {\textbf{Schwurbeln}};
+		\node[right, minimum width=5cm, minimum height=0.75cm, anchor=north west, text width=4.5cm] at (0.5cm,-7.75cm) (stat5val) {\hfill \schwurbeln};	
+	\end{tikzpicture}
+\end{document}
